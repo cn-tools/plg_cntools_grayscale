@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" version="3.0" group="system" method="upgrade">
+	<name>PLG_CNTOOLS_GRAYSCALE</name>
+	<author>CN-Tools | Clemens Neubauer</author>
+	<creationDate>2015 November</creationDate>
+	<copyright>Copyright 2015 (C) Clemens Neubauer. All rights reserved.</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<authorEmail>cn-tools@gmx.at</authorEmail>
+	<authorUrl>https://github.com/cn-tools/</authorUrl>
+	<version>0.0.1</version>
+
+	<description>PLG_CNTOOLS_GRAYSCALE_DESC</description>
+
+	<files>
+		<filename plugin="plg_cntools_grayscale">plg_cntools_grayscale.php</filename>
+		<filename plugin="plg_cntools_grayscale">index.html</filename>
+		<folder>assets</folder>
+	</files>
+
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_system_plg_cntools_grayscale.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_system_plg_cntools_grayscale.sys.ini</language>
+		<language tag="de-DE">de-DE/de-DE.plg_system_plg_cntools_grayscale.ini</language>
+		<language tag="de-DE">de-DE/de-DE.plg_system_plg_cntools_grayscale.sys.ini</language>
+	</languages>
+
+	<updateservers>
+		<server type="extension" priority="1" name="plg_cntools_grayscale Updates">https://raw.githubusercontent.com/cn-tools/plg_cntools_grayscale/master/updateversion.xml</server>
+	</updateservers>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="use" type="radio" default="cdn" class="btn-group btn-group-yesno" label="PLG_CNTOOLS_GRAYSCALE_INEXLAZY" description="PLG_CNTOOLS_GRAYSCALE_INEXLAZY_DESC">
+					<option value="cdn">PLG_CNTOOLS_GRAYSCALE_USE_CDN</option>
+					<option value="own">PLG_CNTOOLS_GRAYSCALE_USE_OWN</option>
+				</field>
+			
+				<field name="jsfile" type="filelist" showon="use:own" hide_none="1" default="jquery.gray.min.js" label="PLG_CNTOOL_GRAYSCALE_JS" directory="plugins/system/plg_cntools_grayscale/assets/js" filter="js" />
+				<field name="cssfile" type="filelist" showon="use:own" hide_none="1" default="gray.min.css" label="PLG_CNTOOL_GRAYSCALE_JS" directory="plugins/system/plg_cntools_grayscale/assets/css" filter="css" />
+
+                <field name="selector" type="text" default=".banneritem img" size="10" label="PLG_CNTOOL_GRAYSCALE_SELECTOR" description="PLG_CNTOOL_GRAYSCALE_SELECTOR_DESC" required="true" />
+                <field name="style" type="text" default="grayscale grayscale-fade" size="10" label="PLG_CNTOOL_GRAYSCALE_STYLE" description="PLG_CNTOOL_GRAYSCALE_STYLE_DESC" required="true" />
+
+				<field name="jquery" type="filelist" hide_none="0" hide_default="1" default="" label="PLG_CNTOOL_GRAYSCALE_JQUERY" directory="plugins/system/plg_cntools_grayscale/assets/jquery" filter="js" />
+
+				<field name="basic_hiddenlast" type="hidden" default="" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>
