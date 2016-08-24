@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<updates>
+	<update>
+		<name>PLG_CNTOOLS_GRAYSCALE</name>
+		<description></description>
+		<element>PLG_CNTOOLS_GRAYSCALE</element>
+		<type>plugin</type>
+		<version>0.0.2</version>
+		<folder>system</folder>
+		<client_id>0</client_id>
+		<client>0</client>
+		<infourl>https://github.com/cn-tools/plg_cntools_grayscale/</infourl>
+		<tags>
+			<tag>stable</tag>
+		</tags>
+		<downloads>
+			<downloadurl type="full" format="zip">https://github.com/cn-tools/plg_cntools_grayscale/archive/master.zip</downloadurl>
+		</downloads>
+		<targetplatform name="joomla" version="3.*"/>
+		<maintainer>CN-Tools | Clemens Neubauer</maintainer>
+		<maintainerurl>https://github.com/cn-tools</maintainerurl>
+	</update>
+</updates>

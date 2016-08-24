@@ -27,6 +27,12 @@ class PlgSystemPlg_CNTools_GrayScale extends JPlugin
 	//-- onBeforeRender -------------------------------------------------------
 	function onBeforeRender ()
 	{
+		$app = JFactory::getApplication();
+		if($app->isAdmin() === true)
+		{
+			return;
+		}
+
 		$document = JFactory::getDocument();
 		
 		//-- add jQuery javascript file if needed -----------------------------
