@@ -43,11 +43,11 @@ class PlgSystemPlg_CNTools_GrayScale extends JPlugin
 
 		if ($this->params->get('use', 'cdn') == 'cdn')
 		{
-			$document->addStyleSheet('//cdn.jsdelivr.net/jquery.gray/1.4.5/gray.min.css');
-			$document->addScript('//cdn.jsdelivr.net/jquery.gray/1.4.5/jquery.gray.min.js ');
+			$document->addStyleSheet('//cdn.jsdelivr.net/jquery.gray/1.5.0/gray.min.css');
+			$document->addScript('//cdn.jsdelivr.net/jquery.gray/1.5.0/jquery.gray.min.js');
 		} else {
-			$document->addStyleSheet(JURI::base() . 'plugins/system/plg_cntools_grayscale/assets/css/' . $this->params->get('cssfile', 'gray.min.css') . '?v=1.4.5');
-			$document->addScript(JURI::root() . 'plugins/system/plg_cntools_grayscale/assets/js/' . $this->params->get('jsfile', 'jquery.gray.min.js') . '?v=1.4.5');
+			$document->addStyleSheet(JURI::base() . 'plugins/system/plg_cntools_grayscale/assets/css/' . $this->params->get('cssfile', 'gray.min.css') . '?v=1.5.0');
+			$document->addScript(JURI::root() . 'plugins/system/plg_cntools_grayscale/assets/js/' . $this->params->get('jsfile', 'jquery.gray.min.js') . '?v=1.5.0');
 		}
 
 		$lScript = 'jQuery(function($) { $(\'' . $this->params->get('selector', '') . '\').addClass(\'' . $this->params->get('style', '') . '\') });';
