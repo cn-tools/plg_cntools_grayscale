@@ -19,7 +19,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 class PlgSystemPlg_CNTools_GrayScale extends JPlugin
 {
 	//-- constructor ----------------------------------------------------------
-	public function PlgSystemPlg_CNTools_GrayScale( &$subject, $config )
+	public function __construct(&$subject, $config)
 	{
 		parent::__construct( $subject, $config );
 	}
