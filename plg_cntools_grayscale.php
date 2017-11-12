@@ -7,7 +7,7 @@
  * @author Clemens Neubauer
  * @link https://github.com/cn-tools/
  * @license		GNU/GPL, see LICENSE.php
- * plg_cntools_bannerext is free software. This version may have been modified pursuant
+ * plg_cntools_grayscale is free software. This version may have been modified pursuant
  * to the GNU General Public License, and as distributed it includes or
  * is derivative of works licensed under the GNU General Public License or
  * other free or open source software licenses.
@@ -43,11 +43,11 @@ class PlgSystemPlg_CNTools_GrayScale extends JPlugin
 
 		if ($this->params->get('use', 'cdn') == 'cdn')
 		{
-			$document->addStyleSheet('//cdn.jsdelivr.net/jquery.gray/1.5.0/gray.min.css');
-			$document->addScript('//cdn.jsdelivr.net/jquery.gray/1.5.0/jquery.gray.min.js');
+			$document->addStyleSheet('//npmcdn.com/jquery-gray@1.6.0/css/gray.min.css');
+			$document->addScript('//npmcdn.com/jquery-gray@1.6.0/js/jquery.gray.min.js');
 		} else {
-			$document->addStyleSheet(JURI::base() . 'plugins/system/plg_cntools_grayscale/assets/css/' . $this->params->get('cssfile', 'gray.min.css') . '?v=1.5.0');
-			$document->addScript(JURI::root() . 'plugins/system/plg_cntools_grayscale/assets/js/' . $this->params->get('jsfile', 'jquery.gray.min.js') . '?v=1.5.0');
+			$document->addStyleSheet(JURI::base() . 'plugins/system/plg_cntools_grayscale/assets/css/' . $this->params->get('cssfile', 'gray.min.css') . '?v=1.6.0');
+			$document->addScript(JURI::root() . 'plugins/system/plg_cntools_grayscale/assets/js/' . $this->params->get('jsfile', 'jquery.gray.min.js') . '?v=1.6.0');
 		}
 
 		$lScript = 'jQuery(function($) { $(\'' . $this->params->get('selector', '') . '\').addClass(\'' . $this->params->get('style', '') . '\') });';
